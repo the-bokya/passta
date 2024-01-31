@@ -1,5 +1,0 @@
-import random
-random.seed("passta")
-og_password = input("Enter common password: ")
-salt = input("Enter salt: ")
-
