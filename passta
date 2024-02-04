@@ -1,0 +1,11 @@
+import random
+import string
+length = int(input("Enter the length of the password to be generated: "))
+password = input("Enter your password: ")
+salt = input("Enter salt: ")
+secure_password = ""
+random.seed(password+str(length)+salt)
+for i in range(length):
+  secure_password += random.choice(string.printable[:95])
+
+print(secure_password)
