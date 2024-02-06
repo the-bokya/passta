@@ -1,8 +1,9 @@
 import random
 import string
+from getpass import getpass
 length = int(input("Enter the length of the password to be generated: "))
-password = input("Enter your password: ")
-salt = input("Enter salt: ")
+password = getpass("Enter your password: ")
+salt = getpass("Enter salt: ")
 secure_password = ""
 random.seed(password+str(length)+salt)
 for i in range(length):
